@@ -7,15 +7,14 @@ module Canteven.Config (
 ) where
 
 
-import Control.Applicative ((<$>), liftA2, Applicative(pure, (<*>)), (<|>))
-import Data.Aeson (Value(String, Object), (.:?), (.!=), ToJSON, encode,
-  eitherDecode, (.:))
+import Control.Applicative ((<$>), liftA2)
+import Data.Aeson (Value(String, Object), (.:?), (.!=), (.:))
 import Data.Maybe (fromMaybe)
 import Data.Yaml (FromJSON(parseJSON), decodeFileEither)
 import System.Console.GetOpt(ArgOrder(Permute), ArgDescr(ReqArg, NoArg),
   OptDescr(Option), getOpt, usageInfo)
 import System.Directory (createDirectoryIfMissing)
-import System.Environment (getArgs, getProgName, setEnv, lookupEnv)
+import System.Environment (getArgs, getProgName)
 import System.Exit (ExitCode(ExitSuccess, ExitFailure))
 import System.FilePath (dropFileName)
 import System.IO (stdout)
@@ -23,8 +22,7 @@ import System.Log (Priority(INFO, DEBUG))
 import System.Log.Formatter (simpleLogFormatter)
 import System.Log.Handler (setFormatter)
 import System.Log.Handler.Simple (fileHandler, streamHandler)
-import System.Log.Logger (updateGlobalLogger, setHandlers, setLevel,
-  infoM, errorM)
+import System.Log.Logger (updateGlobalLogger, setHandlers, setLevel)
 import System.Posix.Process (exitImmediately)
 import qualified Data.Text as T
 

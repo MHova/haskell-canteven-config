@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                canteven-config
-version:             0.1.0.0
+version:             0.1.0.1
 synopsis:            A pattern for configuring programs.
 description:         Turns out, all of our executables shared the same sort of
                      pattern: Parse the command line to locate a config file,

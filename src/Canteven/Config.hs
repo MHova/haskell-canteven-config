@@ -3,7 +3,8 @@
   Utilities to help automate yaml file based program configuration.
 -}
 module Canteven.Config (
-  canteven
+  canteven,
+  loadConfig
 ) where
 
 

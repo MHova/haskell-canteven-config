@@ -73,5 +73,3 @@ parseOptions = do
     die = do
       exitImmediately (ExitFailure 1)
       error "can't reach this statement"
-
-

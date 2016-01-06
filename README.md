@@ -10,19 +10,21 @@ doing that pattern super easy. It is meant to be a rather particular
 
 ## Usage:
 
-    import Canteven.Config(canteven)
-    import Data.Aeson(FromJSON(parseJSON))
-    
-    data MyConfig = MyConfig {
-        someValue :: Int,
-        someUrl :: String
-      }
-    instance FromJSON MyConfig where
-      parseJSON = ...
+```haskell
+import Canteven.Config (canteven)
+import Data.Aeson (FromJSON(parseJSON))
 
-    main = do
-      config <- canteven :: IO MyConfig
-      ...
+data MyConfig = MyConfig {
+    someValue :: Int,
+    someUrl :: String
+  }
+instance FromJSON MyConfig where
+  parseJSON = # ...
+
+main = do
+  config <- canteven :: IO MyConfig
+  # ...
+```
 
 ## YAML
 

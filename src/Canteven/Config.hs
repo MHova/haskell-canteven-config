@@ -3,7 +3,8 @@
   Utilities to help automate yaml file based program configuration.
 -}
 module Canteven.Config (
-  canteven
+  canteven,
+  loadConfig
 ) where
 
 
@@ -73,5 +74,3 @@ parseOptions = do
     die = do
       exitImmediately (ExitFailure 1)
       error "can't reach this statement"
-
-
